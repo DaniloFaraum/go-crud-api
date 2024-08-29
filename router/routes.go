@@ -1,13 +1,12 @@
 package router
 
 import (
-	"crud/handler"
-
+	"github.com/DaniloFaraum/go-crud-api/handler"
 	"github.com/gin-gonic/gin"
 )
 
 func initializeRoutes(router *gin.Engine) {
-	v1 := router.Group("api/v1") //Creates an endpoint group "api/version"
+	v1 := router.Group("api/v1") //Creates an endpoint group "api/version", with all the CRUD operations
 	{
 		v1.GET("/person", handler.ShowPersonHandler)
 
