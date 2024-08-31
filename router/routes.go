@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/DaniloFaraum/go-crud-api/handler"
+	"github.com/DaniloFaraum/go-crud-api/controller"
 	"github.com/gin-gonic/gin"
 )
 
