@@ -16,6 +16,14 @@ func InitializeSQLite() (*gorm.DB, error) {
 	if os.IsNotExist(err){
 		logger.Info("DB file not found, creating...")
 		err = os.MkdirAll("./db", os.ModePerm)
+		if err != nil{
+			return nil, err
+		}
+		file, err := os.Create(dbPath)
+		if err != nil {
+			return nil, err
+		}
+		file.Close()
 	}
 
 	//Create and connect with DB
