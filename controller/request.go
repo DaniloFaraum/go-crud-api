@@ -39,3 +39,22 @@ func (r *CreatePersonRequest) Validate() error {
 	}
 	return nil
 }
+
+type UpdatePersonRequest struct {
+	Name      string `json:"name"`
+	Age       int    `json:"age"`
+	Gender    string `json:"gender"`
+	Ocupation string `json:"ocupation"`
+	Salary    int    `json:"salary"`
+	Alive     *bool  `json:"alive"`
+}
+
+
+func (r *UpdatePersonRequest) Validate() error {
+	// If any field is provided, validation is true
+	if r.Name != "" || r.Gender != "" || r.Ocupation != "" || r.Alive != nil || r.Age > 0 || r.Salary > 0 {
+		return nil
+	}
+
+	return fmt.Errorf("at least one valid field must be provided")
+}
