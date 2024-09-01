@@ -6,6 +6,8 @@ import (
 )
 
 func initializeRoutes(router *gin.Engine) {
+	handler.InitializeHandler()
+	
 	v1 := router.Group("api/v1") //Creates an endpoint group "api/version", with all the CRUD operations
 	{
 		v1.GET("/person", handler.ShowPersonHandler)
