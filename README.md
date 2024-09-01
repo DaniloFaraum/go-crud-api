@@ -55,16 +55,16 @@ Request Body:
   - Response:
 ```
 {
-  "ID": 1,
-  "CreatedAt": "2024-08-31T12:34:56Z",
-  "UpdatedAt": "2024-08-31T12:34:56Z",
-  "DeletedAt": null,
-  "Name": "John Doe",
-  "Age": 30,
-  "Gender": "Male",
-  "Ocupation": "Engineer",
-  "Salary": 50000,
-  "Alive": true
+  {
+    "ID": 1,
+    "Name": "John Doe",
+    "Age": 30,
+    "Gender": "Male",
+    "Ocupation": "Engineer",
+    "Salary": 50000,
+    "Alive": true
+  },
+  "message": "create-person operation sucessful"
 }
 ```
 ### Get All Persons
@@ -83,6 +83,7 @@ Request Body:
     "Alive": true
   },
   ...
+  "message": "list-persons operation sucessful"
 ]
 ```
 ### Get a Person by ID
@@ -91,13 +92,16 @@ Request Body:
   - Response:
 ```
 {
-  "ID": 1,
-  "Name": "John Doe",
-  "Age": 30,
-  "Gender": "Male",
-  "Ocupation": "Engineer",
-  "Salary": 50000,
-  "Alive": true
+  {
+    "ID": 1,
+    "Name": "John Doe",
+    "Age": 30,
+    "Gender": "Male",
+    "Ocupation": "Engineer",
+    "Salary": 50000,
+    "Alive": true
+  },
+  "message": "get-person operation sucessful"
 }
 ```
 ### Update a Person
@@ -108,5 +112,21 @@ Request Body:
 ### Delete a Person
 
 - DELETE /api/persons/{id}
-  - WIP
-
+  - Reponse:
+```
+{
+    "data": {
+        "ID": 1,
+        "CreatedAt": "2024-08-31T21:05:53.7595227-03:00",
+        "UpdatedAt": "2024-08-31T21:05:53.7595227-03:00",
+        "DeletedAt": "2024-08-31T21:53:44.5380916-03:00",
+        "Name": "Danilo",
+        "Age": 18,
+        "Gender": "male",
+        "Ocupation": "developer",
+        "Salary": 1,
+        "Alive": true
+    },
+    "message": "delete-person operation sucessful"
+}
+```
