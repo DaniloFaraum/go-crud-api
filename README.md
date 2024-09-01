@@ -107,7 +107,25 @@ Request Body:
 ### Update a Person
 
 - PUT /api/persons/{id}
-  - WIP
+  - Reponse:
+```
+{
+    "data": {
+        "ID": 1,
+        "CreatedAt": "2024-08-31T21:05:53.7595227-03:00",
+        "UpdatedAt": "2024-08-31T21:05:53.7595227-03:00",
+        "DeletedAt": "2024-08-31T21:53:44.5380916-03:00",
+        "Name": "Danilo",
+        "Age": 18,
+        "Gender": "male",
+        "Ocupation": "developer",
+        "Salary": 1,
+        "Alive": true
+    },
+    "message": "update-person operation sucessful"
+}
+```
+
 
 ### Delete a Person
 
