@@ -2,7 +2,7 @@ package handler
 
 import (
 	"net/http"
-
+	"github.com/DaniloFaraum/go-crud-api/utils"
 	"github.com/DaniloFaraum/go-crud-api/schemas"
 	"github.com/gin-gonic/gin"
 )
@@ -33,5 +33,5 @@ func CreatePersonHandler(ctx *gin.Context) {
 		return
 	}
 
-	sendSucess(ctx, "create-person", person)
+	sendSucess(ctx, "create-person", utils.ConvertToPersonResponse(person))
 }
