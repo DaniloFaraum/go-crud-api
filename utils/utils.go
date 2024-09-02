@@ -19,6 +19,7 @@ func ConvertToPersonResponse(p schemas.Person) schemas.PersonResponse {
 		Gender:    p.Gender,
 		Ocupation: p.Ocupation,
 		Salary:    p.Salary,
+		Alive:     p.Alive,
 		DeletedAt: deletedAt,
 		CreatedAt: p.CreatedAt,
 		UpdatedAt: p.UpdatedAt,
